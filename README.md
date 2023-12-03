@@ -2,11 +2,15 @@ WORK IN PROGRESS
 
 # Building + Testing on Pocket Hardware
 
-TODO check in final .qip/VHDL to reference below...
+[agg23](https://github.com/agg23/analogue-pocket-utils/wiki/Getting-Started) has very kindly shared their Analogue Pocket development experience to make this project possible. 
 
-Given some .qip/VHDL files how to build a pocket image, upload to device, etc
-Can include dumb loopback of frame clock needed for quartus work around
-Can refence some pocket dev docs
+To build a bitstream for the Pocket, open the `Pocket.qpf` project file. It is configured to look for the PipelineC output Quartus IP `.qip` file `/vhdl/pipelinec_top.qip`. Click Generate Bitstream. Upload the bitstream to the Pocket. For more information see [tutorials for using Quartus](https://github.com/agg23/analogue-pocket-utils/wiki/Quartus).
+
+Note that the `pipelinec_top.qip` `top` module requires the following inputs 
+```vhdl
+TODO list IO ports for top ports
+include dumb loopback of frame clock needed for quartus work around
+```
 
 # CflexHDL + PipelineC Flow
 Reference old articles and PipelineC-Graphics repo with picture of various flows supported for full Sphery. 
