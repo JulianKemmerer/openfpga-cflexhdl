@@ -13,11 +13,11 @@ include dumb loopback of frame clock needed for quartus work around
 ```
 
 # CflexHDL + PipelineC Flow
-Reference old articles and PipelineC-Graphics repo with picture of various flows supported for full Sphery. 
 
-Mention in this version of flow the output is VHDL files and Quartus .qip is used.
+The above mentioned `/vhdl/pipelinec_top.qip` file and other associated outputs in `vhdl/` are the output of the [CflexhHDL](https://github.com/suarezvictor/CflexHDL) and [PipelineC](https://github.com/JulianKemmerer/PipelineC) based flow documented [here](https://github.com/JulianKemmerer/PipelineC-Graphics).
 
-TODO update Makefile flow to be easier
+Build the project using the `make` based flow, ex.
+`make BOARD=pocket`. CflexHDL code generation runs first producing PipelineC. Which is followed by many synthesis+PnR runs for PipelineC autopipelining to produce VHDL.
 
 # Chasing the Beam Graphics
 
